@@ -19,11 +19,19 @@ class Pay
             case 'linepay':
                 $this->payment = new LinePay();
             break;
+
+            default:
+                return 'error pay type.';
         }
     }
 
-    public function setParameter($data)
+    public function setInput()
     {
-        $this->payment->setParameter($data);
+        $this->payment->setInput();
+    }
+
+    public function createOrder()
+    {
+        return $this->payment->createOrder();
     }
 }

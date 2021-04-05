@@ -14,10 +14,8 @@ class paymentController extends Controller
         $this->payService = $payService;
     }
 
-    public function pay(Request $request)
+    public function createOrder(Request $request)
     {
-        $pay_type = $request->type;
-
-        $this->payService->pay($pay_type);
+        return $this->payService->createOrder($request);
     }
 }
