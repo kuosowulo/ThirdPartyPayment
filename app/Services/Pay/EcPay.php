@@ -8,9 +8,9 @@ use Ecpay\Sdk\Exceptions\RtnException;
 
 class EcPay
 {
-    const hashKey = '5294y06JbISpM5x9';
+    const hashKey = env('EcPay_hashKey');
 
-    const hashIv = 'v77hoKGq4kWxNNIS';
+    const hashIv = env('EcPay_hashIv');
 
     const action = 'https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5';
 
